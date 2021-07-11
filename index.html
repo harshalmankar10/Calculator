@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+ 
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script>
+    //function for displaying values
+    function dis(val)
+    {
+    document.getElementById('i1').value+=val
+     }
+     function del()
+    {
+      var val = document.case.display.value.slice(0, -1);
+      document.case.display.value = val;
+     }
+    //function for evaluation
+    function solve()
+    {
+    let x = document.getElementById("i1").value
+    let y = eval(x)
+    document.getElementById("i1").value = y
+    }
+    //function for clearing the display
+    function clr()
+    {
+    document.getElementById("i1").value = ""
+    }
+    </script>
+
+</head>
+
+<body>
+  <div class="main">
+    <h2 style="color:yellow;margin-left: 19px;">Calculator</h6>
+
+      <div class="input">
+        <input id="i1" type="text">
+      </div>
+      <div class="buttons">
+        <button class="b1" onclick="dis('7')">7</button>
+        <button class="b1"  onclick="dis('8')">8</button>
+        <button class="b1"  onclick="dis('9')">9</button>
+        <button style="background-color: red;"  onclick="clr()" class="b1">Del</button>
+        <button class="b1"  onclick="dis('4')">4</button>
+        <button class="b1"  onclick="dis('5')">5</button>
+        <button class="b1"  onclick="dis('6')">6</button>
+        <button class="b1"  onclick="dis('+')">+</button>
+        <button class="b1"  onclick="dis('1')">1</button>
+        <button class="b1"  onclick="dis('2')">2</button>
+        <button class="b1"  onclick="dis('3')">3</button>
+        <button class="b1"  onclick="dis('-')">-</button>
+        <button class="b1"  onclick="dis('.')">.</button>
+        <button class="b1"  onclick="dis('0')">0</button>
+        <button class="b1"  onclick="dis('/')">/</button>
+        <button class="b1"  onclick="dis('*')">X</button>
+        <button class="b2"  onclick="clr()">Reset</button>
+        <button class="b3"  onclick="solve()">=</button>
+      </div>
+
+  </div>
+  <script>
+    function change() {
+      var txt = "Nick";
+      document.getElementById("my_field").innerText = txt;
+    }
+  </script>
+
+
+
+</body>
+
+</html>
